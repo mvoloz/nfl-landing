@@ -1,8 +1,10 @@
 # `.env` file is required
+```
 SKIP_PREFLIGHT_CHECK=true
 REACT_APP_SPORTSDB_DEFAULT_API_KEY=1 // default api key
 REACT_APP_SPORTSDB_API_KEY={PATREON_API_KEY} // "upgraded" api key which provides access to a few more endpoints.
 REACT_APP_ENHANCED_API_ENABLED=true
+```
 
 # Getting Started with Create React App
 
