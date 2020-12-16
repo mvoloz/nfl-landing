@@ -32,11 +32,6 @@ function* fetchPlayerDetails(id) {
   });
 }
 
-function* fetchPlayerContract(id) {
-  const playerContract = yield call([Api, Api.getPlayerContracts], id);
-  console.log({ playerContract });
-}
-
 function* fetchAllPlayerDetails({ payload }) {
   const { id, path } = payload;
 
@@ -45,7 +40,6 @@ function* fetchAllPlayerDetails({ payload }) {
     payload: path,
   });
 
-  // yield all([fetchPlayerDetails(id), fetchPlayerContract(id)]);
   yield call(fetchPlayerDetails, id);
 
   yield put({ type: pageLoadCompleteAction.toString() });
